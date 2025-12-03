@@ -2,11 +2,13 @@ import { useState, useEffect } from 'react'
 import { AuthContext } from "./context/AuthContext";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import Home from './pages/Home';
+import ProductDetail from './pages/ProductDetail';
 import { userFound } from '../lib/services';
 import PrivateRoute from './privateRoute/PrivateRoute';
 import PublicRoute from './publicRoute/PublicRoute';
 import Login from './pages/auth/Login';
 import Register from './pages/auth/Register';
+import Navbar from './components/Navbar';
 
 function App() {
   const [user, setUser] = useState(null);
@@ -26,7 +28,19 @@ function App() {
     {
       path: "/",
       element: < PrivateRoute >
+      <>
+      <Navbar />
       <Home /> 
+      </>
+      </PrivateRoute>
+    },
+    {
+      path: "/product/:name",
+      element: < PrivateRoute >
+      <>
+      <Navbar />
+      <ProductDetail />
+      </>
       </PrivateRoute>
     },
     {
@@ -46,7 +60,7 @@ function App() {
   return (
     <>
       <AuthContext.Provider value={{ user, setUser }}>
-        <div className="min-h-screen w-full bg-green-50 bg-[linear-gradient(to_right,#8080800a_1px,transparent_1px),linear-gradient(to_bottom,#8080800a_1px,transparent_1px)] bg-[size:14px_24px]">
+        <div className=" overflow-hidden min-h-screen w-full">
           <RouterProvider router={router} />
         </div>
       </AuthContext.Provider>
