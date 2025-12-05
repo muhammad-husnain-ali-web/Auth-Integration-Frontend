@@ -29,61 +29,613 @@
 
 // export default Home
 
-import React from 'react'
-import { getProductsByCategory, logout } from '../../lib/services'
-import { useEffect, useState } from "react";
-import { useSearchParams } from "react-router-dom";
-import Loader from '../components/Loader'
-import ProductCard from '../components/ProductCard'
+// import React from 'react'
+// import { getProductsByCategory, logout } from '../../lib/services'
+// import { useEffect, useState } from "react";
+// import { useSearchParams } from "react-router-dom";
+// import Loader from '../components/Loader'
+// import ProductCard from '../components/ProductCard'
 
+// const Home = () => {
+
+//   const [searchParams] = useSearchParams();
+
+//   const [products, setProducts] = useState(null)
+//   const [category, setCategory] = useState(null)
+
+//   const getProducts = async (category) => {
+//     let res ;
+//     if(category===null || category===""){
+//       res = await getProductsByCategory("Mobile")
+//     }else{
+//       res = await getProductsByCategory(category)
+//     }
+
+//     console.log(res)
+//     if(!res.success){
+//       setProducts([])
+//     }else{
+//       setCategory(res.category)
+//       setProducts(res.products)
+//     }
+
+//   }
+
+//   useEffect(() => {
+//     const category = searchParams.get("category");
+//     console.log(category)
+//     getProducts(category)
+//   }, [searchParams]);
+
+//   return (
+//     <div className='w-[95%] lg:w-[70%] mx-auto py-20'>
+//       {products===null ? (
+//         <Loader />
+//       ) : (
+//         products.length===0 ? (
+//         <div className='text-6xl'>No Product Found Yet</div>
+//         ) : (
+//           <>
+//           <h1 className='text-2xl font-bold my-10'>{category.name}</h1>
+//           <ProductCard products={products} />
+//           </>
+//         )
+//       )}
+//     </div>
+//   )
+// }
+
+// export default Home
+
+import React from "react";
 
 const Home = () => {
-
-  const [searchParams] = useSearchParams();
-
-  const [products, setProducts] = useState(null)
-  const [category, setCategory] = useState(null)
-
-  const getProducts = async (category) => {
-    let res ;
-    if(category===null || category===""){
-      res = await getProductsByCategory("Mobile")
-    }else{
-      res = await getProductsByCategory(category)
-    }
-    
-    console.log(res)
-    if(!res.success){
-      setProducts([])
-    }else{
-      setCategory(res.category)
-      setProducts(res.products)
-    }
-
-  }
-
-  useEffect(() => {
-    const category = searchParams.get("category");
-    console.log(category)
-    getProducts(category)
-  }, [searchParams]);
-
   return (
-    <div className='w-[95%] lg:w-[70%] mx-auto py-20'>
-      {products===null ? (
-        <Loader />
-      ) : (
-        products.length===0 ? (
-        <div className='text-6xl'>No Product Found Yet</div>
-        ) : (
-          <>
-          <h1 className='text-2xl font-bold my-10'>{category.name}</h1>
-          <ProductCard products={products} />
-          </>
-        )
-      )}
-    </div>
-  )
-}
+    <div className="overflow-y-auto">
+      <div className=" banner w-full grid grid-cols-1 lg:grid-cols-2 h-[170vh] lg:h-screen bg-[#f0f0f0] overflow-hidden">
+        <div className="flex flex-col gap-2 p-8 lg:p-20 h-full">
+          <h1 className=" text-4xl lg:text-7xl font-black">
+            FIND CLOTHES THAT MATCH YOUR STYLE
+          </h1>
+          <p className="text-[#c4c4c4] my-2">
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Inventore
+            earum expedita error dolor provident modi consequuntur unde?
+          </p>
+          <button className="w-full lg:w-fit py-2 px-8 my-4 text-white bg-black rounded-full cursor-pointer">
+            Shop Now
+          </button>
 
-export default Home
+          <div className="my-8 w-full flex items-center justify-center lg:justify-between flex-wrap gap-8">
+            <div className="flex flex-col">
+              <span className="font-bold text-xl">200+</span>
+              <p className="text-[#c4c4c4] my-2">Lorem, ipsum.</p>
+            </div>
+            <div className="h-20 bg-[#c4c4c4] w-0.5"></div>
+
+            <div className="flex flex-col">
+              <span className="font-bold text-xl">2000+</span>
+              <p className="text-[#c4c4c4] my-2">Lorem, ipsum dolor.</p>
+            </div>
+            <div className="h-20 bg-[#c4c4c4] w-0.5"></div>
+
+            <div className="flex flex-col">
+              <span className="font-bold text-xl">30,000+</span>
+              <p className="text-[#c4c4c4] my-2">Lorem, ipsum dolor.</p>
+            </div>
+          </div>
+        </div>
+
+        <div className="relative w-full h-full flex justify-center items-center overflow-hidden">
+          <img className="h-11 w-11 lg:w-14 lg:h-14 absolute top-[33%] left-[6%] lg:left-[20%]" src="/icons/Vector (1).svg" alt="vector" />
+          <img className="h-[76px] w-[76px] lg:h-[104px] lg:w-[104px]  absolute top-[10%] right-[8%] lg:top-[10%] lg:right-[12%] " src="/icons/Vector.svg" alt="vector" />
+          <img
+            className="h-full w-[500px] object-cover"
+            src="/icons/banner-image.jpg"
+            alt="banner image"
+          />
+        </div>
+      </div>
+      <div className="min-h-16 flex flex-wrap gap-4 justify-center lg:justify-between items-center px-4 bg-black text-white">
+        <span className="text-2xl font-black">VERSAGE</span>
+        <span className="text-2xl font-black">ZARA</span>
+        <span className="text-2xl font-black">GUCCI</span>
+        <span className="text-2xl font-black">PRADA</span>
+        <span className="text-2xl font-black">Calvin Klein</span>
+      </div>
+
+      <div className="p-8 text-center text-2xl font-black">NEW ARRIVALS</div>
+
+      <div className="cards w-full flex gap-4 p-4 lg:p-20 overflow-x-auto">
+        <div className="card w-1/2 lg:w-1/4 flex flex-col p-4 rounded-md">
+          <div className="image w-36 lg:w-2xs bg-[#F0EEED] h-36 lg:h-56 overflow-hidden rounded-md">
+            <img
+              className="w-full h-full object-cover rounded-md"
+              src="\products\tshrit.png"
+              alt="shirt"
+            />
+          </div>
+          <div className="text-xs lg:text-lg py-1 font-semibold">
+            T-SHIRT WITH TAPE DETAILS
+          </div>
+
+          <div className="flex items-center gap-2">
+            <div className="flex gap-1">
+              <span>
+                <img
+                  className="h-[15.47px] w-[15.47px] lg:h-[18.49px] lg:w-[18.49px]"
+                  src="/icons/Star 4.svg"
+                  alt="star"
+                />
+              </span>
+              <span>
+                <img
+                  className="h-[15.47px] w-[15.47px] lg:h-[18.49px] lg:w-[18.49px]"
+                  src="/icons/Star 4.svg"
+                  alt="star"
+                />
+              </span>
+              <span>
+                <img
+                  className="h-[15.47px] w-[15.47px] lg:h-[18.49px] lg:w-[18.49px]"
+                  src="/icons/Star 4.svg"
+                  alt="star"
+                />
+              </span>
+              <span>
+                <img
+                  className="h-[15.47px] w-[15.47px] lg:h-[18.49px] lg:w-[18.49px]"
+                  src="/icons/Star 4.svg"
+                  alt="star"
+                />
+              </span>
+              <span>
+                <img
+                  className="h-[15.47px] w-[15.47px] lg:h-[18.49px] lg:w-[18.49px]"
+                  src="/icons/Star 5.svg"
+                  alt="star"
+                />
+              </span>
+            </div>
+            <div>
+              <span className="font-bold">4.5</span>
+              <span>/5</span>
+            </div>
+          </div>
+
+          <div className="flex gap-2 items-center">
+            <span className="text-xl py-1 font-semibold">$120</span>
+          </div>
+        </div>
+
+        <div className="card w-1/2 lg:w-1/4 flex flex-col p-4 rounded-md">
+          <div className="image w-36 lg:w-2xs bg-[#F0EEED] h-36 lg:h-56 overflow-hidden rounded-md">
+            <img
+              className="w-full h-full object-cover rounded-md"
+              src="\products\jeans.png"
+              alt="shirt"
+            />
+          </div>
+          <div className="text-xs lg:text-lg py-1 font-semibold">SKINNY FIT JEANS</div>
+
+          <div className="flex items-center gap-2">
+            <div className="flex gap-1">
+              <span>
+                <img
+                  className="h-[15.47px] w-[15.47px] lg:h-[18.49px] lg:w-[18.49px]"
+                  src="/icons/Star 4.svg"
+                  alt="star"
+                />
+              </span>
+              <span>
+                <img
+                  className="h-[15.47px] w-[15.47px] lg:h-[18.49px] lg:w-[18.49px]"
+                  src="/icons/Star 4.svg"
+                  alt="star"
+                />
+              </span>
+              <span>
+                <img
+                  className="h-[15.47px] w-[15.47px] lg:h-[18.49px] lg:w-[18.49px]"
+                  src="/icons/Star 4.svg"
+                  alt="star"
+                />
+              </span>
+              <span>
+                <img
+                  className="h-[15.47px] w-[15.47px] lg:h-[18.49px] lg:w-[18.49px]"
+                  src="/icons/Star 5.svg"
+                  alt="star"
+                />
+              </span>
+            </div>
+            <div>
+              <span className="font-bold">3.5</span>
+              <span>/5</span>
+            </div>
+          </div>
+
+          <div className="flex gap-2 items-center">
+            <span className="text-xl py-1 font-semibold">$240</span>
+            <span className="text-[#c4c4c4] line-through">$260</span>
+            <span className="w-fit px-2 py-1 rounded-full bg-red-100 text-red-500">
+              -20%
+            </span>
+          </div>
+        </div>
+
+        <div className="card w-1/2 lg:w-1/4 flex flex-col p-4 rounded-md">
+          <div className="image w-36 lg:w-2xs bg-[#F0EEED] h-36 lg:h-56 overflow-hidden rounded-md">
+            <img
+              className="w-full h-full object-cover rounded-md"
+              src="\products\shirt1.png"
+              alt="shirt"
+            />
+          </div>
+          <div className="text-xs lg:text-lg py-1 font-semibold">CHECKERED SHIRT</div>
+
+          <div className="flex items-center gap-2">
+            <div className="flex gap-1">
+              <span>
+                <img
+                  className="h-[15.47px] w-[15.47px] lg:h-[18.49px] lg:w-[18.49px]"
+                  src="/icons/Star 4.svg"
+                  alt="star"
+                />
+              </span>
+              <span>
+                <img
+                  className="h-[15.47px] w-[15.47px] lg:h-[18.49px] lg:w-[18.49px]"
+                  src="/icons/Star 4.svg"
+                  alt="star"
+                />
+              </span>
+              <span>
+                <img
+                  className="h-[15.47px] w-[15.47px] lg:h-[18.49px] lg:w-[18.49px]"
+                  src="/icons/Star 4.svg"
+                  alt="star"
+                />
+              </span>
+              <span>
+                <img
+                  className="h-[15.47px] w-[15.47px] lg:h-[18.49px] lg:w-[18.49px]"
+                  src="/icons/Star 4.svg"
+                  alt="star"
+                />
+              </span>
+              <span>
+                <img
+                  className="h-[15.47px] w-[15.47px] lg:h-[18.49px] lg:w-[18.49px]"
+                  src="/icons/Star 5.svg"
+                  alt="star"
+                />
+              </span>
+            </div>
+            <div>
+              <span className="font-bold">4.5</span>
+              <span>/5</span>
+            </div>
+          </div>
+
+          <div className="flex gap-2 items-center">
+            <span className="text-xl py-1 font-semibold">$180</span>
+          </div>
+        </div>
+
+        <div className="card w-1/2 lg:w-1/4 flex flex-col p-4 rounded-md">
+          <div className="image w-36 lg:w-2xs bg-[#F0EEED] h-36 lg:h-56 overflow-hidden rounded-md">
+            <img
+              className="w-full h-full object-cover rounded-md"
+              src="\products\shirt.png"
+              alt="shirt"
+            />
+          </div>
+          <div className="text-xs lg:text-lg py-1 font-semibold">
+            SLEEVE STRIPED T-SHIRT
+          </div>
+
+          <div className="flex items-center gap-2">
+            <div className="flex gap-1">
+              <span>
+                <img
+                  className="h-[15.47px] w-[15.47px] lg:h-[18.49px] lg:w-[18.49px]"
+                  src="/icons/Star 4.svg"
+                  alt="star"
+                />
+              </span>
+              <span>
+                <img
+                  className="h-[15.47px] w-[15.47px] lg:h-[18.49px] lg:w-[18.49px]"
+                  src="/icons/Star 4.svg"
+                  alt="star"
+                />
+              </span>
+              <span>
+                <img
+                  className="h-[15.47px] w-[15.47px] lg:h-[18.49px] lg:w-[18.49px]"
+                  src="/icons/Star 4.svg"
+                  alt="star"
+                />
+              </span>
+              <span>
+                <img
+                  className="h-[15.47px] w-[15.47px] lg:h-[18.49px] lg:w-[18.49px]"
+                  src="/icons/Star 4.svg"
+                  alt="star"
+                />
+              </span>
+              <span>
+                <img
+                  className="h-[15.47px] w-[15.47px] lg:h-[18.49px] lg:w-[18.49px]"
+                  src="/icons/Star 5.svg"
+                  alt="star"
+                />
+              </span>
+            </div>
+            <div>
+              <span className="font-bold">4.5</span>
+              <span>/5</span>
+            </div>
+          </div>
+
+          <div className="flex gap-2 items-center">
+            <span className="text-xl py-1 font-semibold">$130</span>
+            <span className="text-[#c4c4c4] line-through">$160</span>
+            <span className="w-fit px-2 py-1 rounded-full bg-red-100 text-red-500">
+              -30%
+            </span>
+          </div>
+        </div>
+
+      </div>
+
+      <div className="text-center w-full my-8 px-4">
+        <button className="w-full lg:w-fit py-2 px-20 rounded-full border border-[#f0f0f0] text-center cursor-pointer">Veiw All</button>
+      </div>
+
+    <div className="w-[95%] mx-auto my-8 h-0.5 bg-[#f0f0f0] rounded-md"></div>
+
+      <div className="p-8 text-center text-2xl font-black">TOP SELLINGS</div>
+
+      <div className="cards w-full flex gap-4 p-4 lg:p-20 overflow-x-auto">
+
+        <div className="card w-1/2 lg:w-1/4 flex flex-col p-4 rounded-md">
+          <div className="image w-36 lg:w-2xs bg-[#F0EEED] h-36 lg:h-56 overflow-hidden rounded-md">
+            <img
+              className="w-full h-full object-cover rounded-md"
+              src="\products\shirt3.png"
+              alt="shirt"
+            />
+          </div>
+          <div className="text-xs lg:text-lg py-1 font-semibold">
+            VERTICAL STRIPED SHIRT
+          </div>
+
+          <div className="flex items-center gap-2">
+            <div className="flex gap-1">
+              <span>
+                <img
+                  className="h-[15.47px] w-[15.47px] lg:h-[18.49px] lg:w-[18.49px]"
+                  src="/icons/Star 4.svg"
+                  alt="star"
+                />
+              </span>
+              <span>
+                <img
+                  className="h-[15.47px] w-[15.47px] lg:h-[18.49px] lg:w-[18.49px]"
+                  src="/icons/Star 4.svg"
+                  alt="star"
+                />
+              </span>
+              <span>
+                <img
+                  className="h-[15.47px] w-[15.47px] lg:h-[18.49px] lg:w-[18.49px]"
+                  src="/icons/Star 4.svg"
+                  alt="star"
+                />
+              </span>
+              <span>
+                <img
+                  className="h-[15.47px] w-[15.47px] lg:h-[18.49px] lg:w-[18.49px]"
+                  src="/icons/Star 4.svg"
+                  alt="star"
+                />
+              </span>
+              <span>
+                <img
+                  className="h-[15.47px] w-[15.47px] lg:h-[18.49px] lg:w-[18.49px]"
+                  src="/icons/Star 4.svg"
+                  alt="star"
+                />
+              </span>
+            </div>
+            <div>
+              <span className="font-bold">5.0</span>
+              <span>/5</span>
+            </div>
+          </div>
+
+          <div className="flex gap-2 items-center">
+            <span className="text-xl py-1 font-semibold">$212</span>
+            <span className="text-[#c4c4c4] line-through">$232</span>
+            <span className="w-fit px-2 py-1 rounded-full bg-red-100 text-red-500">-20</span>
+          </div>
+        </div>
+
+        <div className="card w-1/2 lg:w-1/4 flex flex-col p-4 rounded-md">
+          <div className="image w-36 lg:w-2xs bg-[#F0EEED] h-36 lg:h-56 overflow-hidden rounded-md">
+            <img
+              className="w-full h-full object-cover rounded-md"
+              src="\products\tshirt2.png"
+              alt="shirt"
+            />
+          </div>
+          <div className="text-xs lg:text-lg py-1 font-semibold">
+            COURAGE GRAPHIC T-SHIRT
+          </div>
+
+          <div className="flex items-center gap-2">
+            <div className="flex gap-1">
+              <span>
+                <img
+                  className="h-[15.47px] w-[15.47px] lg:h-[18.49px] lg:w-[18.49px]"
+                  src="/icons/Star 4.svg"
+                  alt="star"
+                />
+              </span>
+              <span>
+                <img
+                  className="h-[15.47px] w-[15.47px] lg:h-[18.49px] lg:w-[18.49px]"
+                  src="/icons/Star 4.svg"
+                  alt="star"
+                />
+              </span>
+              <span>
+                <img
+                  className="h-[15.47px] w-[15.47px] lg:h-[18.49px] lg:w-[18.49px]"
+                  src="/icons/Star 4.svg"
+                  alt="star"
+                />
+              </span>
+              <span>
+                <img
+                  className="h-[15.47px] w-[15.47px] lg:h-[18.49px] lg:w-[18.49px]"
+                  src="/icons/Star 4.svg"
+                  alt="star"
+                />
+              </span>
+            </div>
+            <div>
+              <span className="font-bold">4.0</span>
+              <span>/5</span>
+            </div>
+          </div>
+
+          <div className="flex gap-2 items-center">
+            <span className="text-xl py-1 font-semibold">$145</span>
+          </div>
+        </div>
+
+        <div className="card w-1/2 lg:w-1/4 flex flex-col p-4 rounded-md">
+          <div className="image w-36 lg:w-2xs bg-[#F0EEED] h-36 lg:h-56 overflow-hidden rounded-md">
+            <img
+              className="w-full h-full object-cover rounded-md"
+              src="\products\shorts.png"
+              alt="shirt"
+            />
+          </div>
+          <div className="text-xs lg:text-lg py-1 font-semibold">
+            LOOSE FIT BERMUDA SHORTS
+          </div>
+
+          <div className="flex items-center gap-2">
+            <div className="flex gap-1">
+              <span>
+                <img
+                  className="h-[15.47px] w-[15.47px] lg:h-[18.49px] lg:w-[18.49px]"
+                  src="/icons/Star 4.svg"
+                  alt="star"
+                />
+              </span>
+              <span>
+                <img
+                  className="h-[15.47px] w-[15.47px] lg:h-[18.49px] lg:w-[18.49px]"
+                  src="/icons/Star 4.svg"
+                  alt="star"
+                />
+              </span>
+              <span>
+                <img
+                  className="h-[15.47px] w-[15.47px] lg:h-[18.49px] lg:w-[18.49px]"
+                  src="/icons/Star 4.svg"
+                  alt="star"
+                />
+              </span>
+            </div>
+            <div>
+              <span className="font-bold">3.0</span>
+              <span>/5</span>
+            </div>
+          </div>
+
+          <div className="flex gap-2 items-center">
+            <span className="text-xl py-1 font-semibold">$80</span>
+          </div>
+        </div>
+
+        <div className="card w-1/2 lg:w-1/4 flex flex-col p-4 rounded-md">
+          <div className="image w-36 lg:w-2xs bg-[#F0EEED] h-36 lg:h-56 overflow-hidden rounded-md">
+            <img
+              className="w-full h-full object-cover rounded-md"
+              src="\products\jeans2.png"
+              alt="shirt"
+            />
+          </div>
+          <div className="text-xs lg:text-lg py-1 font-semibold">
+            FADED SKINNY JEANS
+          </div>
+
+          <div className="flex items-center gap-2">
+            <div className="flex gap-1">
+              <span>
+                <img
+                  className="h-[15.47px] w-[15.47px] lg:h-[18.49px] lg:w-[18.49px]"
+                  src="/icons/Star 4.svg"
+                  alt="star"
+                />
+              </span>
+              <span>
+                <img
+                  className="h-[15.47px] w-[15.47px] lg:h-[18.49px] lg:w-[18.49px]"
+                  src="/icons/Star 4.svg"
+                  alt="star"
+                />
+              </span>
+              <span>
+                <img
+                  className="h-[15.47px] w-[15.47px] lg:h-[18.49px] lg:w-[18.49px]"
+                  src="/icons/Star 4.svg"
+                  alt="star"
+                />
+              </span>
+              <span>
+                <img
+                  className="h-[15.47px] w-[15.47px] lg:h-[18.49px] lg:w-[18.49px]"
+                  src="/icons/Star 4.svg"
+                  alt="star"
+                />
+              </span>
+              <span>
+                <img
+                  className="h-[15.47px] w-[15.47px] lg:h-[18.49px] lg:w-[18.49px]"
+                  src="/icons/Star 5.svg"
+                  alt="star"
+                />
+              </span>
+            </div>
+            <div>
+              <span className="font-bold">4.5</span>
+              <span>/5</span>
+            </div>
+          </div>
+
+          <div className="flex gap-2 items-center">
+            <span className="text-xl py-1 font-semibold">$240</span>
+          </div>
+        </div>
+
+      </div>
+
+      <div className="text-center w-full my-8 px-4">
+        <button className="w-full lg:w-fit py-2 px-20 rounded-full border border-[#f0f0f0] text-center cursor-pointer">Veiw All</button>
+      </div>
+
+      <div className="w-[90%] h-[70vh] my-8 mx-auto bg-[#f0f0f0] rounded-4xl">
+        <h2 className="text-center py-12 px-8 text-4xl font-black">BROWSE BY DRESS STYLE</h2>
+      </div>
+
+    </div>
+  );
+};
+
+export default Home;
