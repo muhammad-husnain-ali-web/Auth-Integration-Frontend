@@ -126,8 +126,16 @@ const Home = () => {
         </div>
 
         <div className="relative w-full h-full flex justify-center items-center overflow-hidden">
-          <img className="h-11 w-11 lg:w-14 lg:h-14 absolute top-[33%] left-[6%] lg:left-[20%]" src="/icons/Vector (1).svg" alt="vector" />
-          <img className="h-[76px] w-[76px] lg:h-[104px] lg:w-[104px]  absolute top-[10%] right-[8%] lg:top-[10%] lg:right-[12%] " src="/icons/Vector.svg" alt="vector" />
+          <img
+            className="h-11 w-11 lg:w-14 lg:h-14 absolute top-[33%] left-[6%] lg:left-[20%]"
+            src="/icons/Vector (1).svg"
+            alt="vector"
+          />
+          <img
+            className="h-[76px] w-[76px] lg:h-[104px] lg:w-[104px]  absolute top-[10%] right-[8%] lg:top-[10%] lg:right-[12%] "
+            src="/icons/Vector.svg"
+            alt="vector"
+          />
           <img
             className="h-full w-[500px] object-cover"
             src="/icons/banner-image.jpg"
@@ -215,7 +223,9 @@ const Home = () => {
               alt="shirt"
             />
           </div>
-          <div className="text-xs lg:text-lg py-1 font-semibold">SKINNY FIT JEANS</div>
+          <div className="text-xs lg:text-lg py-1 font-semibold">
+            SKINNY FIT JEANS
+          </div>
 
           <div className="flex items-center gap-2">
             <div className="flex gap-1">
@@ -271,7 +281,9 @@ const Home = () => {
               alt="shirt"
             />
           </div>
-          <div className="text-xs lg:text-lg py-1 font-semibold">CHECKERED SHIRT</div>
+          <div className="text-xs lg:text-lg py-1 font-semibold">
+            CHECKERED SHIRT
+          </div>
 
           <div className="flex items-center gap-2">
             <div className="flex gap-1">
@@ -386,19 +398,19 @@ const Home = () => {
             </span>
           </div>
         </div>
-
       </div>
 
       <div className="text-center w-full my-8 px-4">
-        <button className="w-full lg:w-fit py-2 px-20 rounded-full border border-[#f0f0f0] text-center cursor-pointer">Veiw All</button>
+        <button className="w-full lg:w-fit py-2 px-20 rounded-full border border-[#f0f0f0] text-center cursor-pointer">
+          Veiw All
+        </button>
       </div>
 
-    <div className="w-[95%] mx-auto my-8 h-0.5 bg-[#f0f0f0] rounded-md"></div>
+      <div className="w-[95%] mx-auto my-8 h-0.5 bg-[#f0f0f0] rounded-md"></div>
 
       <div className="p-8 text-center text-2xl font-black">TOP SELLINGS</div>
 
       <div className="cards w-full flex gap-4 p-4 lg:p-20 overflow-x-auto">
-
         <div className="card w-1/2 lg:w-1/4 flex flex-col p-4 rounded-md">
           <div className="image w-36 lg:w-2xs bg-[#F0EEED] h-36 lg:h-56 overflow-hidden rounded-md">
             <img
@@ -458,7 +470,9 @@ const Home = () => {
           <div className="flex gap-2 items-center">
             <span className="text-xl py-1 font-semibold">$212</span>
             <span className="text-[#c4c4c4] line-through">$232</span>
-            <span className="w-fit px-2 py-1 rounded-full bg-red-100 text-red-500">-20</span>
+            <span className="w-fit px-2 py-1 rounded-full bg-red-100 text-red-500">
+              -20
+            </span>
           </div>
         </div>
 
@@ -623,17 +637,194 @@ const Home = () => {
             <span className="text-xl py-1 font-semibold">$240</span>
           </div>
         </div>
-
       </div>
 
       <div className="text-center w-full my-8 px-4">
-        <button className="w-full lg:w-fit py-2 px-20 rounded-full border border-[#f0f0f0] text-center cursor-pointer">Veiw All</button>
+        <button className="w-full lg:w-fit py-2 px-20 rounded-full border border-[#f0f0f0] text-center cursor-pointer">
+          Veiw All
+        </button>
       </div>
 
-      <div className="w-[90%] h-[70vh] my-8 mx-auto bg-[#f0f0f0] rounded-4xl">
-        <h2 className="text-center py-12 px-8 text-4xl font-black">BROWSE BY DRESS STYLE</h2>
+      <div className="w-[98%] lg:w-[90%] min-h-[70vh] my-8 mx-auto px-2 lg:px-20 bg-[#f0f0f0] rounded-4xl">
+        <h2 className="text-center py-12 px-8 text-4xl font-black">
+          BROWSE BY DRESS STYLE
+        </h2>
+
+        <div className="cards w-full flex-wrap flex gap-4 py-3 lg:py-8">
+          <div className="w-full lg:w-[39%] h-[190px] lg:h-[289px] bg-[url('/mens/image1.png')] bg-cover scale-x-[-1] rounded-2xl">
+            <h2 className="text-lg font-bold p-8 scale-x-[-1]">Casual</h2>
+          </div>
+
+          <div className="w-full lg:w-[59%] h-[190px] lg:h-[289px] bg-[url('/mens/image2.png')] bg-cover scale-x-[-1] rounded-2xl">
+            <h2 className="text-lg font-bold p-8 scale-x-[-1]">Formal</h2>
+          </div>
+
+          <div className="w-full lg:w-[59%] h-[190px] lg:h-[289px] bg-[url('/mens/image3.png')] bg-cover rounded-2xl">
+            <h2 className="text-lg font-bold p-8">Party</h2>
+          </div>
+          <div className="w-full lg:w-[39%] h-[190px] lg:h-[289px] bg-[url('/mens/image4.png')] bg-cover rounded-2xl">
+            <h2 className="text-lg font-bold p-8">Gym</h2>
+          </div>
+        </div>
       </div>
 
+      <div className="w-[90%] mx-auto my-8 flex justify-between items-center">
+        <h2 className="text-4xl font-black">OUR HAPPY CUSTOMERS</h2>
+        <div className="flex gap-4 items-center">
+          <span><img src="/icons/arrowLeft.svg" alt="" /></span>
+          <span><img src="/icons/arrowRight.svg" alt="" /></span>
+        </div>
+      </div>
+
+      <div className="reviews w-[98%] lg:w-[90%] mx-auto my-8 flex gap-4 overflow-x-auto">
+
+        <div className="reveiw min-w-[97%] lg:min-w-[358px] h-[186px] lg:h-60 border border-[#f0f0f0] rounded-xl py-6 lg:py-7 px-6 lg:px-8">
+          
+            <div className="flex gap-1">
+              <span>
+                <img
+                  className="h-[15.47px] w-[15.47px] lg:h-[18.49px] lg:w-[18.49px]"
+                  src="/icons/Star 4.svg"
+                  alt="star"
+                />
+              </span>
+              <span>
+                <img
+                  className="h-[15.47px] w-[15.47px] lg:h-[18.49px] lg:w-[18.49px]"
+                  src="/icons/Star 4.svg"
+                  alt="star"
+                />
+              </span>
+              <span>
+                <img
+                  className="h-[15.47px] w-[15.47px] lg:h-[18.49px] lg:w-[18.49px]"
+                  src="/icons/Star 4.svg"
+                  alt="star"
+                />
+              </span>
+              <span>
+                <img
+                  className="h-[15.47px] w-[15.47px] lg:h-[18.49px] lg:w-[18.49px]"
+                  src="/icons/Star 4.svg"
+                  alt="star"
+                />
+              </span>
+              <span>
+                <img
+                  className="h-[15.47px] w-[15.47px] lg:h-[18.49px] lg:w-[18.49px]"
+                  src="/icons/Star 4.svg"
+                  alt="star"
+                />
+              </span>
+            </div>
+
+            <div className="flex items-center gap-2 py-2">
+              <h3 className="text-xl font-bold">Sarah M.</h3>
+              <span><img className="h-[15px] w-[15px] lg:h-6 lg:w-6" src="/icons/blueTick.svg" alt="" /></span>
+            </div>
+
+            <p className="text-[#c4c4c4] text-sm overflow-y-auto">"I'm blown away by the quality and style of the clothes I received from Shop.co. From casual wear to elegant dresses, every piece I've bought has exceeded my expectations.”</p>
+          
+        </div>
+
+        <div className="reveiw min-w-[97%] lg:min-w-[358px] h-[186px] lg:h-60 border border-[#f0f0f0] rounded-xl py-6 lg:py-7 px-6 lg:px-8">
+          
+            <div className="flex gap-1">
+              <span>
+                <img
+                  className="h-[15.47px] w-[15.47px] lg:h-[18.49px] lg:w-[18.49px]"
+                  src="/icons/Star 4.svg"
+                  alt="star"
+                />
+              </span>
+              <span>
+                <img
+                  className="h-[15.47px] w-[15.47px] lg:h-[18.49px] lg:w-[18.49px]"
+                  src="/icons/Star 4.svg"
+                  alt="star"
+                />
+              </span>
+              <span>
+                <img
+                  className="h-[15.47px] w-[15.47px] lg:h-[18.49px] lg:w-[18.49px]"
+                  src="/icons/Star 4.svg"
+                  alt="star"
+                />
+              </span>
+              <span>
+                <img
+                  className="h-[15.47px] w-[15.47px] lg:h-[18.49px] lg:w-[18.49px]"
+                  src="/icons/Star 4.svg"
+                  alt="star"
+                />
+              </span>
+              <span>
+                <img
+                  className="h-[15.47px] w-[15.47px] lg:h-[18.49px] lg:w-[18.49px]"
+                  src="/icons/Star 4.svg"
+                  alt="star"
+                />
+              </span>
+            </div>
+
+            <div className="flex items-center gap-2 py-2">
+              <h3 className="text-xl font-bold">Alex K.</h3>
+              <span><img className="h-[15px] w-[15px] lg:h-6 lg:w-6" src="/icons/blueTick.svg" alt="" /></span>
+            </div>
+
+            <p className="text-[#c4c4c4] text-sm overflow-y-auto">"Finding clothes that align with my personal style used to be a challenge until I discovered Shop.co. The range of options they offer is truly remarkable, catering to a variety of tastes and occasions.”</p>
+        </div>
+
+        <div className="reveiw min-w-[97%] lg:min-w-[358px] h-[186px] lg:h-60 border border-[#f0f0f0] rounded-xl py-6 lg:py-7 px-6 lg:px-8">
+          
+            <div className="flex gap-1">
+              <span>
+                <img
+                  className="h-[15.47px] w-[15.47px] lg:h-[18.49px] lg:w-[18.49px]"
+                  src="/icons/Star 4.svg"
+                  alt="star"
+                />
+              </span>
+              <span>
+                <img
+                  className="h-[15.47px] w-[15.47px] lg:h-[18.49px] lg:w-[18.49px]"
+                  src="/icons/Star 4.svg"
+                  alt="star"
+                />
+              </span>
+              <span>
+                <img
+                  className="h-[15.47px] w-[15.47px] lg:h-[18.49px] lg:w-[18.49px]"
+                  src="/icons/Star 4.svg"
+                  alt="star"
+                />
+              </span>
+              <span>
+                <img
+                  className="h-[15.47px] w-[15.47px] lg:h-[18.49px] lg:w-[18.49px]"
+                  src="/icons/Star 4.svg"
+                  alt="star"
+                />
+              </span>
+              <span>
+                <img
+                  className="h-[15.47px] w-[15.47px] lg:h-[18.49px] lg:w-[18.49px]"
+                  src="/icons/Star 4.svg"
+                  alt="star"
+                />
+              </span>
+            </div>
+
+            <div className="flex items-center gap-2 py-2">
+              <h3 className="text-xl font-bold">James L.</h3>
+              <span><img className="h-[15px] w-[15px] lg:h-6 lg:w-6" src="/icons/blueTick.svg" alt="" /></span>
+            </div>
+
+            <p className="text-[#c4c4c4] text-sm overflow-y-auto">"As someone who's always on the lookout for unique fashion pieces, I'm thrilled to have stumbled upon Shop.co. The selection of clothes is not only diverse but also on-point with the latest trends.”</p>
+        </div>
+        
+      </div>
+      
     </div>
   );
 };
