@@ -27,20 +27,12 @@ function App() {
   const router = createBrowserRouter([
     {
       path: "/",
-      element: < PrivateRoute >
-      <>
-      <Navbar />
-      <Home /> 
-      </>
-      </PrivateRoute>
+      element: <Home /> 
     },
     {
       path: "/product/:name",
       element: < PrivateRoute >
-      <>
-      <Navbar />
       <ProductDetail />
-      </>
       </PrivateRoute>
     },
     {
@@ -61,6 +53,7 @@ function App() {
     <>
       <AuthContext.Provider value={{ user, setUser }}>
         <div className=" overflow-hidden min-h-screen w-full">
+          <Navbar />
           <RouterProvider router={router} />
         </div>
       </AuthContext.Provider>

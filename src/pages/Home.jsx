@@ -88,6 +88,7 @@
 // export default Home
 
 import React from "react";
+import { Link } from "react-router-dom";
 
 const Home = () => {
   return (
@@ -155,16 +156,16 @@ const Home = () => {
 
       <div className="cards w-full flex gap-4 p-4 lg:p-20 overflow-x-auto">
         <div className="card w-1/2 lg:w-1/4 flex flex-col p-4 rounded-md">
-          <div className="image w-36 lg:w-2xs bg-[#F0EEED] h-36 lg:h-56 overflow-hidden rounded-md">
+          <Link  to={'/product/T-SHIRT WITH TAPE DETAILS'} className="image w-36 lg:w-2xs bg-[#F0EEED] h-36 lg:h-56 overflow-hidden rounded-md">
             <img
               className="w-full h-full object-cover rounded-md"
               src="\products\tshrit.png"
               alt="shirt"
             />
-          </div>
-          <div className="text-xs lg:text-lg py-1 font-semibold">
+          </Link>
+          <Link  to={'/product/T-SHIRT WITH TAPE DETAILS'} className="text-xs lg:text-lg py-1 font-semibold">
             T-SHIRT WITH TAPE DETAILS
-          </div>
+          </Link>
 
           <div className="flex items-center gap-2">
             <div className="flex gap-1">
@@ -216,16 +217,16 @@ const Home = () => {
         </div>
 
         <div className="card w-1/2 lg:w-1/4 flex flex-col p-4 rounded-md">
-          <div className="image w-36 lg:w-2xs bg-[#F0EEED] h-36 lg:h-56 overflow-hidden rounded-md">
+          <Link  to={'/product/T-SHIRT WITH TAPE DETAILS'} className="image w-36 lg:w-2xs bg-[#F0EEED] h-36 lg:h-56 overflow-hidden rounded-md">
             <img
               className="w-full h-full object-cover rounded-md"
               src="\products\jeans.png"
               alt="shirt"
             />
-          </div>
-          <div className="text-xs lg:text-lg py-1 font-semibold">
+          </Link>
+          <Link  to={'/product/T-SHIRT WITH TAPE DETAILS'} className="text-xs lg:text-lg py-1 font-semibold">
             SKINNY FIT JEANS
-          </div>
+          </Link>
 
           <div className="flex items-center gap-2">
             <div className="flex gap-1">
@@ -274,16 +275,16 @@ const Home = () => {
         </div>
 
         <div className="card w-1/2 lg:w-1/4 flex flex-col p-4 rounded-md">
-          <div className="image w-36 lg:w-2xs bg-[#F0EEED] h-36 lg:h-56 overflow-hidden rounded-md">
+          <Link  to={'/product/T-SHIRT WITH TAPE DETAILS'} className="image w-36 lg:w-2xs bg-[#F0EEED] h-36 lg:h-56 overflow-hidden rounded-md">
             <img
               className="w-full h-full object-cover rounded-md"
               src="\products\shirt1.png"
               alt="shirt"
             />
-          </div>
-          <div className="text-xs lg:text-lg py-1 font-semibold">
+          </Link>
+          <Link  to={'/product/T-SHIRT WITH TAPE DETAILS'} className="text-xs lg:text-lg py-1 font-semibold">
             CHECKERED SHIRT
-          </div>
+          </Link>
 
           <div className="flex items-center gap-2">
             <div className="flex gap-1">
@@ -335,16 +336,16 @@ const Home = () => {
         </div>
 
         <div className="card w-1/2 lg:w-1/4 flex flex-col p-4 rounded-md">
-          <div className="image w-36 lg:w-2xs bg-[#F0EEED] h-36 lg:h-56 overflow-hidden rounded-md">
+          <Link  to={'/product/T-SHIRT WITH TAPE DETAILS'} className="image w-36 lg:w-2xs bg-[#F0EEED] h-36 lg:h-56 overflow-hidden rounded-md">
             <img
               className="w-full h-full object-cover rounded-md"
               src="\products\shirt.png"
               alt="shirt"
             />
-          </div>
-          <div className="text-xs lg:text-lg py-1 font-semibold">
+          </Link>
+          <Link  to={'/product/T-SHIRT WITH TAPE DETAILS'} className="text-xs lg:text-lg py-1 font-semibold">
             SLEEVE STRIPED T-SHIRT
-          </div>
+          </Link>
 
           <div className="flex items-center gap-2">
             <div className="flex gap-1">
@@ -412,16 +413,16 @@ const Home = () => {
 
       <div className="cards w-full flex gap-4 p-4 lg:p-20 overflow-x-auto">
         <div className="card w-1/2 lg:w-1/4 flex flex-col p-4 rounded-md">
-          <div className="image w-36 lg:w-2xs bg-[#F0EEED] h-36 lg:h-56 overflow-hidden rounded-md">
+          <Link  to={'/product/T-SHIRT WITH TAPE DETAILS'} className="image w-36 lg:w-2xs bg-[#F0EEED] h-36 lg:h-56 overflow-hidden rounded-md">
             <img
               className="w-full h-full object-cover rounded-md"
               src="\products\shirt3.png"
               alt="shirt"
             />
-          </div>
-          <div className="text-xs lg:text-lg py-1 font-semibold">
+          </Link>
+          <Link  to={'/product/T-SHIRT WITH TAPE DETAILS'} className="text-xs lg:text-lg py-1 font-semibold">
             VERTICAL STRIPED SHIRT
-          </div>
+          </Link>
 
           <div className="flex items-center gap-2">
             <div className="flex gap-1">
@@ -477,16 +478,16 @@ const Home = () => {
         </div>
 
         <div className="card w-1/2 lg:w-1/4 flex flex-col p-4 rounded-md">
-          <div className="image w-36 lg:w-2xs bg-[#F0EEED] h-36 lg:h-56 overflow-hidden rounded-md">
+          <Link className="image w-36 lg:w-2xs bg-[#F0EEED] h-36 lg:h-56 overflow-hidden rounded-md">
             <img
               className="w-full h-full object-cover rounded-md"
               src="\products\tshirt2.png"
               alt="shirt"
             />
-          </div>
-          <div className="text-xs lg:text-lg py-1 font-semibold">
+          </Link>
+          <Link  to={'/product/T-SHIRT WITH TAPE DETAILS'} className="text-xs lg:text-lg py-1 font-semibold">
             COURAGE GRAPHIC T-SHIRT
-          </div>
+          </Link>
 
           <div className="flex items-center gap-2">
             <div className="flex gap-1">
@@ -531,16 +532,16 @@ const Home = () => {
         </div>
 
         <div className="card w-1/2 lg:w-1/4 flex flex-col p-4 rounded-md">
-          <div className="image w-36 lg:w-2xs bg-[#F0EEED] h-36 lg:h-56 overflow-hidden rounded-md">
+          <Link  to={'/product/T-SHIRT WITH TAPE DETAILS'} className="image w-36 lg:w-2xs bg-[#F0EEED] h-36 lg:h-56 overflow-hidden rounded-md">
             <img
               className="w-full h-full object-cover rounded-md"
               src="\products\shorts.png"
               alt="shirt"
             />
-          </div>
-          <div className="text-xs lg:text-lg py-1 font-semibold">
+          </Link>
+          <Link  to={'/product/T-SHIRT WITH TAPE DETAILS'} className="text-xs lg:text-lg py-1 font-semibold">
             LOOSE FIT BERMUDA SHORTS
-          </div>
+          </Link>
 
           <div className="flex items-center gap-2">
             <div className="flex gap-1">
@@ -578,16 +579,16 @@ const Home = () => {
         </div>
 
         <div className="card w-1/2 lg:w-1/4 flex flex-col p-4 rounded-md">
-          <div className="image w-36 lg:w-2xs bg-[#F0EEED] h-36 lg:h-56 overflow-hidden rounded-md">
+          <Link  to={'/product/T-SHIRT WITH TAPE DETAILS'} className="image w-36 lg:w-2xs bg-[#F0EEED] h-36 lg:h-56 overflow-hidden rounded-md">
             <img
               className="w-full h-full object-cover rounded-md"
               src="\products\jeans2.png"
               alt="shirt"
             />
-          </div>
-          <div className="text-xs lg:text-lg py-1 font-semibold">
+          </Link>
+          <Link  to={'/product/T-SHIRT WITH TAPE DETAILS'} className="text-xs lg:text-lg py-1 font-semibold">
             FADED SKINNY JEANS
-          </div>
+          </Link>
 
           <div className="flex items-center gap-2">
             <div className="flex gap-1">
